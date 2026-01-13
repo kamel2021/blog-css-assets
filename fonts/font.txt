@@ -1,0 +1,129 @@
+<style>
+
+@font-face {
+  font-family: &#39;Changa&#39;;
+  src: url(&#39;/assets/fonts/Changa-400.woff2&#39;) format(&#39;woff2&#39;);
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: &#39;Changa&#39;;
+  src: url(&#39;/assets/fonts/Changa-700.woff2&#39;) format(&#39;woff2&#39;);
+  font-weight: 700;
+  font-display: swap;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;line-height:1.6}
+body, html {
+    background: #f8f5f2;
+    color: #333;
+    padding: 0; /* تأكد أيضا&#1611; من أن padding = 0 */
+    margin: 0 auto; /* يمكن إبقاؤها أو جعلها 0 */
+    direction: rtl;
+    text-align: right;
+    font-family: &#39;ChangaLocal&#39;, system-ui, sans-serif;
+}
+
+/* === إصلاح تموضع المحتوى === */
+body{margin-right:auto!important;margin-left:auto!important;float:none!important}
+.main-wrapper,.content-wrapper,.post-wrapper,.blogPosts{float:none!important;margin:0 auto!important;direction:rtl!important;text-align:right!important}
+
+/* === H1 و H2 الهيدر (عنوان المدونة) === */
+.header-widget h1.blog-title,
+.header-widget h2.blog-title {
+  display: flex !important;
+  align-items: center !important;
+  height: 70px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.header-widget h1.blog-title a,
+.header-widget h2.blog-title a {
+  color: #2962ff !important;
+  font-size: 32px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  display: block !important;
+  line-height: 1.2 !important;
+  transition: color 0.3s ease !important;
+  font-family: &#39;ChangaLocal&#39;, system-ui, sans-serif !important;
+}
+
+.header-widget h1.blog-title a:hover,
+.header-widget h2.blog-title a:hover {
+  color: #1a4fd8 !important;
+}
+
+/* === H3 للصفحة الرئيسية === */
+.onHome .blogPosts .hentry h3.post-title,.onHome .blogPosts .hentry h3.entry-title{display:block!important;font-size:1.3rem!important;margin:10px 0 15px!important;line-height:1.4!important;color:#000!important;font-weight:600!important}
+.onHome .blogPosts .hentry h2.post-title a,.onHome .blogPosts .hentry h2.entry-title a{color:inherit!important;text-decoration:none!important;display:inline!important;transition:color .3s ease!important}
+.onHome .blogPosts .hentry h3.post-title a:hover,.onHome .blogPosts .hentry h3.entry-title a:hover{color:#2962ff!important}
+
+/* === H1 المقال المفرد === */
+.onItem .blogPosts .hentry h1.post-title,.onPost .blogPosts .hentry h1.post-title{display:block!important;font-size:28px!important;font-weight:700!important;margin:0 0 25px!important;line-height:1.3!important;color:#343352!important;padding-top:10px!important}
+.onItem .blogPosts .hentry h1.post-title a,.onPost .blogPosts .hentry h1.post-title a{color:inherit!important;text-decoration:none!important;font-size:inherit!important}
+.onItem .blogPosts .hentry h2.post-title,.onPost .blogPosts .hentry h2.post-title,.onItem .blogPosts .hentry h3.post-title,.onPost .blogPosts .hentry h3.post-title{display:none!important}
+
+/* === H1 الأرشيف === */
+.onBlog .blogTitle h1.title{display:block!important;font-size:26px!important;margin-bottom:30px!important;color:#2962ff!important;font-weight:700!important;padding-bottom:10px!important;border-bottom:2px solid #f0f0f0!important}
+.onBlog .blogTitle h2.title{display:none!important}
+
+/* === H3 للأرشيف === */
+.onBlog .blogPosts .hentry h3.post-title,.onBlog .blogPosts .hentry h3.entry-title{display:block!important;font-size:1.3rem!important;margin:10px 0 15px!important;line-height:1.4!important;color:#000!important;font-weight:600!important}
+.onBlog .blogPosts .hentry h3.post-title a,.onBlog .blogPosts .hentry h3.entry-title a{color:inherit!important;text-decoration:none!important;transition:color .3s ease!important}
+.onBlog .blogPosts .hentry h3.post-title a:hover,.onBlog .blogPosts .hentry h3.entry-title a:hover{color:#2962ff!important}
+
+/* === إخفاء عناوين بلوجر التلقائية === */
+h1.entry-title:not(.post-title),.blog-posts h1:not(.blog-title):not(.post-title),.posts h1:not(.post-title),.item h1:not(.post-title){display:none!important;height:0!important;width:0!important;overflow:hidden!important;position:absolute!important;left:-9999px!important;opacity:0!important}
+
+/* === حلول طارئة === */
+.blogPosts .hentry .postTitle{display:block!important;visibility:visible!important;opacity:1!important;position:static!important;height:auto!important;width:auto!important;overflow:visible!important}
+.blogPosts .hentry .postTitle a{display:inline!important;color:inherit!important;text-decoration:none!important}
+
+/* === إصلاحات إضافية === */
+.postBody h2{color:#343352!important;font-size:1.7rem!important;margin:1.5em 0 .8em!important;font-weight:600!important}
+.postBody h3{color:#2962ff!important;font-size:1.5rem!important;margin:1.3em 0 .7em!important;font-weight:600!important}
+.postBody h4{color:#343352!important;font-size:1.3rem!important;margin:1.1em 0 .6em!important;font-weight:600!important}
+.onItem .post-title,.onPost .post-title{display:block!important;visibility:visible!important;opacity:1!important}
+
+/* === تحسينات إضافية === */
+.onItem .blogPosts .hentry h1.post-title,.onPost .blogPosts .hentry h1.post-title{border-bottom:1px solid #eee!important;padding-bottom:15px!important;margin-bottom:25px!important}
+.onHome .blogPosts .hentry .postTitle,.onBlog .blogPosts .hentry .postTitle{margin-bottom:15px!important}
+.onHome .blogPosts .hentry h3.post-title a:hover,.onHome .blogPosts .hentry h3.entry-title a:hover,.onBlog .blogPosts .hentry h3.post-title a:hover,.onBlog .blogPosts .hentry h3.entry-title a:hover{text-decoration:underline!important}
+
+/* === أنماط عامة === */
+h1{color:#263238;text-align:center;padding:20px 0;font-size:2.2em;margin-bottom:15px}
+h2{color:#37474f;padding-bottom:10px;margin:35px 0 20px;font-size:1.7em}
+h3{color:#546e7a;margin:25px 0 15px;font-size:1.4em}
+p{margin-bottom:16px;text-align:justify;font-size:1.05em}
+ul,ol{margin-right:25px;margin-bottom:20px;padding-right:10px}
+li{margin-bottom:10px}
+.highlight-box{background:#eceff1;border-radius:10px;padding:25px;margin:25px 0;border-right:4px solid #607d8b}
+table{width:100%;border-collapse:collapse;margin:25px 0;border-radius:8px;overflow:hidden;box-shadow:0 3px 8px rgba(0,0,0,.05)}
+th{background:#607d8b;color:#fff;padding:15px;text-align:right;font-weight:600}
+td{padding:15px;background:#fff;border-bottom:1px solid #eee}
+tr:hover td{background:#f9f7f3}
+.quote{font-style:italic;color:#666;border-right:3px solid #90a4ae;padding-right:15px;margin:25px 0;background:#fcfaf7;padding:20px;border-radius:0 8px 8px 0}
+.source{color:#546e7a;font-weight:700;margin-top:5px;font-size:.95em}
+.intro-box{background:#e0f2f1;border-radius:10px;padding:25px;margin:25px 0;border:1px solid #b2dfdb}
+.faq-container{background:#fff;border-radius:10px;padding:25px;margin:30px 0;box-shadow:0 5px 15px rgba(139,107,74,.08);border:1px solid #eee}
+.faq-item{border-bottom:1px dashed #e0d6cc;padding:20px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-item h3{color:#37474f;margin-bottom:10px;font-size:1.3em}
+.faq-item p,.faq-item ul,.faq-item ol{color:#555;font-size:1.05em}
+.related-articles{background:linear-gradient(135deg,#f0ebe6,#f2f7f7);border-radius:15px;padding:30px;margin-top:50px;box-shadow:0 5px 15px rgba(0,0,0,.05)}
+.related-articles h2{text-align:center;color:#37474f;margin-bottom:10px;font-size:1.8em}
+.zodiac-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:15px;margin-top:25px}
+.zodiac-grid a{display:flex;align-items:center;justify-content:center;padding:15px;background:#fff;border-radius:10px;text-decoration:none;color:#37474f;transition:all .3s ease;text-align:center;box-shadow:0 3px 10px rgba(0,0,0,.05);border-right:4px solid #90a4ae;font-weight:600;gap:8px}
+.zodiac-grid a:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,.1);color:#546e7a;background:#eceff1}
+footer{text-align:center;margin-top:50px;padding-top:25px;border-top:1px solid #ddd;color:#777;font-size:.9em}
+.zodiac-links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:20px 0}
+.zodiac-links a{background:#fff;padding:10px 20px;border-radius:50px;text-decoration:none;color:#37474f;font-weight:600;border:1px solid #90a4ae;transition:all .3s ease}
+.zodiac-links a:hover{background:#607d8b;color:#fff;transform:translateY(-2px)}
+.update-notice{background:linear-gradient(135deg,#e0f2f1,#b2dfdb);border-right:4px solid #009688;padding:20px;margin:25px 0;border-radius:10px;box-shadow:0 4px 12px rgba(0,150,136,.15)}
+.warning-box{background:linear-gradient(135deg,#ffebee,#ffcdd2);border-right:4px solid #d32f2f;padding:20px;margin:25px 0;border-radius:10px}
+.warning-box h3{color:#c62828}
+@media (max-width:768px){body{padding:15px}h1{font-size:1.8em}.lead{font-size:1em}table{font-size:.9em}td,th{padding:10px}.onItem .blogPosts .hentry h1.post-title,.onPost .blogPosts .hentry h1.post-title{font-size:24px!important;margin:0 0 20px!important}.onHome .blogPosts .hentry h3.post-title,.onHome .blogPosts .hentry h3.entry-title,.onBlog .blogPosts .hentry h3.post-title,.onBlog .blogPosts .hentry h3.entry-title{font-size:1.1rem!important}.onBlog .blogTitle h1.title{font-size:22px!important}.onItem .header-widget .header-image-wrapper,.onPost .header-widget .header-image-wrapper{height:60px!important}.onItem .header-widget .header-image-wrapper img,.onPost .header-widget .header-image-wrapper img{max-width:120px!important;height:auto!important}}
+@media (min-width:769px) and (max-width:1024px){.onItem .blogPosts .hentry h1.post-title,.onPost .blogPosts .hentry h1.post-title{font-size:26px!important}.onHome .blogPosts .hentry h3.post-title,.onHome .blogPosts .hentry h3.entry-title,.onBlog .blogPosts .hentry h3.post-title,.onBlog .blogPosts .hentry h3.entry-title{font-size:1.2rem!important}}
+</style>
