@@ -2,6 +2,20 @@
 /* GitHub: https://github.com/kamel2021/blog-css-assets */
 
 /* ==================== تأثيرات HOVER للصور ==================== */
+/* تأثيرات الصور العامة */
+.main_content img:hover {
+    transform: scale(1.1) rotate(2deg);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* استثناءات خاصة */
+.onItem .blogPosts .hentry:hover img,
+.postEntry img:hover {
+    transform: scale(1.02) rotate(0.3deg);
+    transition: transform 0.3s ease;
+}
+
+/* باقي التأثيرات كما هي */
 .blogPosts .hentry:hover img {
     transform: scale(1.05) rotate(0.5deg);
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
