@@ -125,8 +125,8 @@ a:hover {
 
 .header-widget h1.blog-title a:hover,
 .header-widget h2.blog-title a:hover {
-    color: #1a4fd8;
-    text-decoration: none;
+    color: #1a4fd8 !important;
+    text-decoration: none !important;
 }
 
 .footer a:hover {
