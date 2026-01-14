@@ -112,6 +112,14 @@ a:hover {
     text-decoration: underline;
 }
 
+/* تأثيرات hover للعناوين في الأرشيف والرئيسية */
+.onHome .blogPosts .hentry h3.post-title a:hover,
+.onHome .blogPosts .hentry h3.entry-title a:hover,
+.onBlog .blogPosts .hentry h3.post-title a:hover,
+.onBlog .blogPosts .hentry h3.entry-title a:hover {
+    text-decoration: underline !important;
+    color: #2962ff !important;
+}
 /* ==================== المشاركة ==================== */
 .sharing_button:hover {
     transform: translateY(-3px) scale(1.1);
