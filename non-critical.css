@@ -173,6 +173,91 @@ input:focus {
   }
 }
 
+/* ==================== تنسيقات الصفحات الفرعية (Home, Blog Archive) ==================== */
+.onHome .blogPosts .hentry h3.post-title,
+.onHome .blogPosts .hentry h3.entry-title {
+  display: block !important;
+  font-size: 1.3rem !important;
+  margin: 10px 0 15px !important;
+  line-height: 1.4 !important;
+  color: #000 !important;
+  font-weight: 600 !important;
+}
+
+.onBlog .blogTitle h1.title {
+  display: block !important;
+  font-size: 26px !important;
+  margin-bottom: 30px !important;
+  color: #2962ff !important;
+  font-weight: 700 !important;
+  padding-bottom: 10px !important;
+  border-bottom: 2px solid #f0f0f0 !important;
+}
+
+.onBlog .blogPosts .hentry h3.post-title,
+.onBlog .blogPosts .hentry h3.entry-title {
+  display: block !important;
+  font-size: 1.3rem !important;
+  margin: 10px 0 15px !important;
+  line-height: 1.4 !important;
+  color: #000 !important;
+  font-weight: 600 !important;
+}
+
+.onBlog .blogPosts .hentry h3.post-title a,
+.onBlog .blogPosts .hentry h3.entry-title a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+/* ==================== تنسيقات المحتوى الداخلي للمقال (Post Body) ==================== */
+.postBody h2 {
+  color: #343352 !important;
+  font-size: 1.7rem !important;
+  margin: 1.5em 0 .8em !important;
+  font-weight: 600 !important;
+}
+
+.postBody h3 {
+  color: #2962ff !important;
+  font-size: 1.5rem !important;
+  margin: 1.3em 0 .7em !important;
+  font-weight: 600 !important;
+}
+
+.postBody h4 {
+  color: #343352 !important;
+  font-size: 1.3rem !important;
+  margin: 1.1em 0 .6em !important;
+  font-weight: 600 !important;
+}
+
+/* ==================== إخفاء العناوين الافتراضية (Emergency Fixes) ==================== */
+h1.entry-title:not(.post-title),
+.blog-posts h1:not(.blog-title):not(.post-title),
+.posts h1:not(.post-title),
+.item h1:not(.post-title) {
+  display: none !important;
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+.blogPosts .hentry .postTitle {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: static !important;
+  height: auto !important;
+  width: auto !important;
+  overflow: visible !important;
+}
+
+.blogPosts .hentry .postTitle a {
+  display: inline !important;
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
 /* ================= NON-CRITICAL CONTENT ================= */
 
 .highlight-box,
@@ -250,10 +335,10 @@ footer {
 
 /* === MOBILE CONTENT === */
 @media (max-width:768px){
-  body { padding:15px }
-  h1 { font-size:1.8em }
-  table { font-size:.9em }
-  td,th { padding:10px }
+  body { padding:15px; }
+  h1 { font-size:1.8em; }
+  table { font-size:.9em; }
+  td,th { padding:10px; }
 
   .highlight-box,
   .intro-box,
