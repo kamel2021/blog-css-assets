@@ -19,7 +19,7 @@
   }
 
   .img-link:hover img {
-    opacity: 1.05;
+    opacity: 1;
   }
 
   .cust-widget.pt_4 .cust-post:hover .article-image img {
@@ -142,7 +142,7 @@
   /* ==================== مؤثرات محدودة ==================== */
   .related li:hover .postThumbnail img {
     transform: scale(1.08) rotate(1.5deg);
-    opacity: 1.05;
+    opacity: 1;
   }
 } /* END hover devices */
 
